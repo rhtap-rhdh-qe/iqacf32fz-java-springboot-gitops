@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: iqacf32fz-java-springboot-gitops
+  description: This is GitOps manifest for iqacf32fz-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: iqacf32fz-java-springboot
+    janus-idp.io/tekton: iqacf32fz-java-springboot 
+    backstage.io/kubernetes-id: iqacf32fz-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:iqacf32fz-java-springboot
